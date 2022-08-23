@@ -1,0 +1,28 @@
+%basic defination
+\newcommand{\citshapeRef}{\kaishu}            %font
+\definecolor{colReference}{HTML}{FFA042}   %box color
+%settings of introduction environment
+\tcbset{
+    referencesty/.style={
+    enhanced,
+    breakable,
+    colback=colReference!10,
+    colframe=colReference,
+    fonttitle=\bfseries,
+    colbacktitle=colReference,
+    fontupper=\citshapeRef,
+    leftrule=5pt,
+    rightrule=0pt,
+    toprule=0pt,
+    bottomrule=0pt,
+    top=8pt,
+    before skip=8pt,
+    sharp corners
+    },
+}
+\newenvironment{myReference}{
+    \begin{tcolorbox}[referencesty]
+}
+{
+    \end{tcolorbox}
+}

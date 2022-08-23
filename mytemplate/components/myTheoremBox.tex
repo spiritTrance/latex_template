@@ -1,0 +1,33 @@
+%Theorem environment
+    %Here to define a counter
+\newcounter{myTheoremCounter}[subsection]
+    %Here to define a auto counter
+\newcommand{\myAutoTheoremCounter}{\stepcounter{myTheoremCounter}\thesubsection.\themyTheoremCounter}
+\definecolor{myTheoremColor}{HTML}{FFDC35}
+\tcbset{
+    myTheoremStyle/.style={
+    enhanced,
+    breakable,
+    colback=myTheoremColor!10,
+    colframe=myTheoremColor,
+    fonttitle=\bfseries,
+    colbacktitle=myTheoremColor,
+    fontupper=\citshapeIntro,
+    attach boxed title to top left={},
+    boxed title style = {sharp corners},
+    boxrule=1pt,
+    toprule=1pt,
+    bottomrule=1pt,
+    top=8pt,
+    before skip=8pt,
+    sharp corners,
+    },
+}
+%Title needed
+\newenvironment{myTheorem}[1]{
+    \begin{tcolorbox}[
+        myTheoremStyle,
+        title=\color{black}{定理\myAutoTheoremCounter\quad #1}
+    ]
+        
+}{\end{tcolorbox}}

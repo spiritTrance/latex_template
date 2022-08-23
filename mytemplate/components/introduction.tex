@@ -1,0 +1,36 @@
+%NOTE THAT \usepackage{enumitem} \usepackage{bbding} is required
+%basic defination
+\newcommand{\introductionDefalutName}{内容提要}    %default title
+\newcommand{\citshapeIntro}{\kaishu}            %font
+\newcommand{\introDot}{\upshape\scriptsize\SquareShadowBottomRight}     %dots before items in introductions
+\definecolor{structurecolor}{HTML}{0072E3} %box color
+%settings of introduction environment
+\tcbset{
+    introductionsty/.style={
+    enhanced,
+    breakable,
+    colback=structurecolor!10,
+    colframe=structurecolor,
+    fonttitle=\bfseries,
+    colbacktitle=structurecolor,
+    fontupper=\citshapeIntro,
+    attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+    boxrule=0pt,
+    toprule=0.5pt,
+    bottomrule=0.5pt,
+    top=8pt,
+    before skip=8pt,
+    sharp corners
+    },
+}
+
+\newenvironment{introduction}[1][\introductionDefalutName]{
+    \begin{tcolorbox}[introductionsty,title={#1}]
+        \begin{multicols}{2}
+            \begin{itemize}[label=\textcolor{structurecolor}{\introDot}]
+}
+{
+            \end{itemize}
+        \end{multicols}
+    \end{tcolorbox}
+}

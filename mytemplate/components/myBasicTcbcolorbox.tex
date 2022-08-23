@@ -1,0 +1,10 @@
+%自定义盒子环境
+%summarybox[color]{title}
+\newenvironment{mybox}[2][\coldefault]{
+    \begin{tcolorbox}[
+        title=#2,
+        colframe=#1,
+        colback=#1!10,
+        breakable
+    ]
+}{\end{tcolorbox}}

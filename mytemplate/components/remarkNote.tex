@@ -1,0 +1,33 @@
+% DENOTE THAT pifont package is required for command \ping
+
+\definecolor{colRemark}{HTML}{73BF00}
+\tcbset{
+    remarksty/.style={
+        colframe=magenta,
+        colback=magenta!12!white,
+        boxed title style={colback=magenta},
+	    breakable,
+	    enhanced,
+	    sharp corners,
+	    boxsep=1pt,
+	    attach boxed title to top left={yshift=-\tcboxedtitleheight,  yshifttext=-.75\baselineskip},
+	    boxed title style={boxsep=1pt,sharp corners},
+        fonttitle=\bfseries\sffamily,
+        drop lifted shadow
+    },
+}
+
+\newtcolorbox{remark}[1][]{
+    remarksty,
+    title={\scalebox{1.75}{\raisebox{-.25ex}{\ding{43}}}~笔记},
+    colframe=yellow!45!white,
+    colback=yellow!45!white,
+    coltitle=colRemark,
+    fontupper=\sffamily,
+    boxed title style={colback=yellow!45!white},
+    boxed title style={boxsep=1ex,sharp corners},%%
+    overlay unbroken and first={
+        \node[below right,font=\normalsize,color=red,text width=.8\linewidth]
+        at (title.north east) {#1};
+    }
+}

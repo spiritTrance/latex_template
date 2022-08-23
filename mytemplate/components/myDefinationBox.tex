@@ -1,0 +1,33 @@
+%Defination environment
+    %Here to define a counter
+    \newcounter{myDefinationCounter}[subsection]
+    %Here to define a auto counter
+\newcommand{\myAutoDefinationCounter}{\stepcounter{myDefinationCounter}\thesubsection.\themyDefinationCounter}
+\definecolor{myDefinationColor}{HTML}{01814A}
+\tcbset{
+    myDefinationStyle/.style={
+    enhanced,
+    breakable,
+    colback=myDefinationColor!10,
+    colframe=myDefinationColor,
+    fonttitle=\bfseries,
+    colbacktitle=myDefinationColor,
+    fontupper=\citshapeIntro,
+    attach boxed title to top left={},
+    boxed title style = {sharp corners},
+    boxrule=1pt,
+    toprule=1pt,
+    bottomrule=1pt,
+    top=8pt,
+    before skip=8pt,
+    sharp corners
+    },
+}
+%Title needed
+\newenvironment{myDefination}[1]{
+    \begin{tcolorbox}[
+        myDefinationStyle,
+        title=\color{white}{定义\myAutoDefinationCounter\quad #1}
+    ]
+        
+}{\end{tcolorbox}}

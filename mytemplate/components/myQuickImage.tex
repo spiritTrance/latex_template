@@ -1,0 +1,8 @@
+%myimage[figureScale]{path}{caption}{label}
+\newcommand{\myimage}[4][1]{{
+    \begin{figure}[htbp]
+        \centering
+        \label{fig:#4}
+        \includegraphics[scale=#1]{#2}
+        \caption{#3}
+    \end{figure}}}
