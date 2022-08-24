@@ -1,0 +1,169 @@
+\documentclass{ctexart}
+
+\input{mytemplate/myFavorPkgs.tex}
+\input{mytemplate/componentsIncluder.tex}
+
+\begin{document}
+    \tableofcontents
+    \newpage
+
+    \section{前言}
+    部分模板参考overleaf上的项目(\mydef{bbe Book Template}和\mydef{ElegantBook Template})，这些模板都很不错www，推荐去体验一下。
+
+    \section{如何使用文档}
+    在导言区引入下面语句进行使用：
+    \begin{lstlisting}
+        \input{mytemplate/myFavorPkgs.tex}
+        \input{mytemplate/componentsIncluder.tex}
+    \end{lstlisting}
+
+    其中myFavorPkgs用于导入依赖包，componentsIncluder用于导入定制模板。用户可以调整componentsIncluder中的内容
+    进行模板的增删。\myemph{注意}myFavorPkgs.tex先导入。
+    \newpage
+    \section{模板介绍}
+    以下模板定义于components文件夹下，可根据自己需要进行修改（如颜色，线条粗细等）
+    \subsection{introduction}
+
+    \begin{lstlisting}
+\begin{introduction}
+    \item   `极限'
+    \item   `导数'
+    \item   `数列收敛定理'
+\end{introduction}
+    \end{lstlisting}
+    
+    \begin{introduction}
+        \item   极限
+        \item   导数
+        \item   数列收敛定理
+    \end{introduction}
+    
+    \subsection{myBasicTcbcolorbox}
+    
+
+    \begin{lstlisting}
+\begin{mybox}[purple]{`标题'}
+
+\end{mybox}
+    \end{lstlisting}
+
+    注意第一个参数是可选参数，但是似乎把定义删去了（默认值是默认颜色），\myemph{需要用definecolor自定义颜色或默认提供的颜色}，否则颜色会出错。
+
+    第二个参数是盒子标题，如果为空，则不含标题栏。
+    
+    优势在于可以自定义颜色
+    \begin{mybox}[purple]{标题}
+
+    \end{mybox}
+
+    \subsection{myColorPlate}
+    
+    定义了一大堆颜色，结合VsCode中的Color Highlight插件可以看到颜色。
+
+    \subsection{myDefinationBox}
+    
+    
+    定义框，注意section和subsection要有，否则计数器可能不是你想的那样。（作者能力有限QWQ）
+
+    
+    \begin{lstlisting}
+\begin{myDefination}{`勾股定理'}
+    \begin{myDefination}{`有理数'}
+        `可用'$\frac p q$`表示的数，其中p,q为整数且互质。'
+    \end{myDefination}
+\end{myDefination}
+    \end{lstlisting}
+    
+    \begin{myDefination}{有理数}
+        可用$\frac p q$表示的数，其中p,q为整数且互质。
+    \end{myDefination}
+    
+    \subsection{myLstListingSetting}
+    
+    用于全局定义listing环境，作者主要用于代码环境，可自行修改。
+
+    \subsection{myProperty}
+    
+    用于定义性质环境。
+
+    
+    \begin{lstlisting}
+\begin{myProperties}
+    \item `人是会行走的动物。'
+    \item `人会思考。'
+    \item `人会交流。'
+\end{myProperties}
+    \end{lstlisting}
+    
+    
+    \begin{myProperties}
+        \item 人是会行走的动物。
+        \item 人会思考。
+        \item 人会交流。
+    \end{myProperties}
+    
+    \subsection{myQuickFontSty}
+    
+    \begin{lstlisting}
+`自定义文字字体，如作者使用了'\mydef{`定义'}`字样和'\myemph{`强调'}`字样。'
+    \end{lstlisting}
+    
+    自定义文字字体，如作者使用了\mydef{定义}字样和\myemph{强调}字样。
+
+    \subsection{myQuickImage}
+    自定义命令快捷方式插入图片，但是因为有snippet的存在，可以弃用。
+    \begin{lstlisting}
+\myimage{scale}{imagePath}{caption}{label}
+    \end{lstlisting}
+    
+    \subsection{myReference}
+    引用环境。
+    
+    \begin{lstlisting}
+\begin{myReference}
+    `夏至至长，夏至致短。'
+\end{myReference}
+    \end{lstlisting}
+    
+    \begin{myReference}
+        夏至至长，夏至致短。
+    \end{myReference}
+    
+    \subsection{mySignalColor}
+    此模板自定义颜色，以便于自己使用。可自定义。
+
+    \subsection{myTheoremBox}
+    
+    定理框，注意section和subsection要有，否则计数器可能不是你想的那样。颜色可进入对应模板自定义（作者能力有限QWQ）
+
+    
+    \begin{lstlisting}
+\begin{myTheorem}{`勾股定理'}
+    \begin{equation}
+        \label{eq:eq1}
+            a^2+b^2=c^2
+    \end{equation}
+\end{myTheorem}
+    \end{lstlisting}
+    
+    \begin{myTheorem}{勾股定理}
+        \begin{equation}
+            \label{eq:eq1}
+                a^2+b^2=c^2
+        \end{equation}
+    \end{myTheorem}
+
+    \subsection{remarkNote}
+    笔记环境。
+    
+    \begin{lstlisting}
+\begin{remark}
+    `作者是个傻逼。'
+\end{remark}
+    \end{lstlisting}
+    
+    \begin{remark}
+        作者是个傻逼。
+    \end{remark}
+    
+\end{document}
