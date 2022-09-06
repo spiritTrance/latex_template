@@ -13,3 +13,4 @@
 \contentsline {subsection}{\numberline {3.10}mySignalColor}{5}{subsection.3.10}%
 \contentsline {subsection}{\numberline {3.11}myTheoremBox}{5}{subsection.3.11}%
 \contentsline {subsection}{\numberline {3.12}remarkNote}{5}{subsection.3.12}%
+\contentsline {subsection}{\numberline {3.13}sideBox}{5}{subsection.3.13}%

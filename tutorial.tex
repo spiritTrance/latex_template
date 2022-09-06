@@ -17,7 +17,7 @@
         \input{mytemplate/componentsIncluder.tex}
     \end{lstlisting}
 
-    其中myFavorPkgs用于导入依赖包，componentsIncluder用于导入定制模板。用户可以调整componentsIncluder中的内容
+    其中myFavorPkgs用于导入依赖包，c o m p o n e n t s I n c l u d e r用于导入定制模板。用户可以调整componentsIncluder中的内容
     进行模板的增删。\myemph{注意}myFavorPkgs.tex先导入。
     \newpage
     \section{模板介绍}
@@ -166,4 +166,13 @@
         作者是个傻逼。
     \end{remark}
     
+\subsection{sideBox}
+注意合理调整页边距，侧注方框宽度为2.5cm，在sideBox模板下可以修改；在包里面的geometry可以修改页边距。
+\begin{lstlisting}
+    `我所说的这句话在旁边可以'\elegantpar`\{引用\}\{这就是旁注\}！'
+\end{lstlisting}
+
+我所说的这句话在旁边可以\elegantpar{引用}{这就是旁注}！
+
+
 \end{document}

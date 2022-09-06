@@ -1,0 +1,26 @@
+\documentclass{ctexart}
+\input{mytemplate/myFavorPkgs.tex}
+\input{mytemplate/componentsIncluder.tex}
+%添加页眉和水印
+\usepackage{ctex, draftwatermark, everypage}
+\SetWatermarkText{SpiritTrance}
+\SetWatermarkLightness{0.95}
+\SetWatermarkScale{0.6}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[CO, CE]{by: SpiritTrance}
+
+%文档基本信息
+\title{计算机网络学习笔记}
+\author{SpiritTrance}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \newpage
+    \tableofcontents
+    \newpage
+    \input{inputs/<filename>.tex}
+    \clearpage
+    \newpage
+\end{document}

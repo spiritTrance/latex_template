@@ -5,23 +5,23 @@
 \usepackage{tikz}
 \usepackage[space,UTF8]{ctex}
 
-\definecolor{tcolor}{RGB}{255,127,  0} % default: 0,124,53
-\definecolor{lcolor}{RGB}{255,178,102} % default: 153,255,153
-\definecolor{pcolor}{RGB}{251,204,231} % default: 216,255,216
+\definecolor{__selWordColor__}{HTML}{EA7500} % default: 0,124,53
+\definecolor{__ledLineColor__}{HTML}{EA7500} % default: 153,255,153
+\definecolor{__sideBoxColor__}{HTML}{ACD6FF} % default: 216,255,216
 
 \newcommand{\elegantpar}[2]{%
-  \textcolor{tcolor}{$\bm\langle{}\!{}$#1${}\!{}\bm\rangle$}%
+  \textcolor{__selWordColor__}{$\bm\langle{}\!{}$#1${}\!{}\bm\rangle$}%
   \begin{tikzpicture}[remember picture, baseline=-0.75ex]%
     \node[coordinate] (inText) {};%
   \end{tikzpicture}%
   \marginpar{%
     \renewcommand{\baselinestretch}{1.0}%
     \begin{tikzpicture}[remember picture]%
-      \draw node[fill= pcolor, rounded corners,text width=\marginparwidth] (inNote){\footnotesize#2};%
+      \draw node[fill= __sideBoxColor__, rounded corners,text width=\marginparwidth] (inNote){\footnotesize#2};%
   \end{tikzpicture}%
   }%
   \begin{tikzpicture}[remember picture, overlay]%
-    \draw[draw = lcolor, thick]
+    \draw[draw = __ledLineColor__, thick]
       ([yshift=-0.55em] inText)
         -| ([xshift=-0.55em] inNote.west)
         -| (inNote.west);%

@@ -1,0 +1,3 @@
+mytemplate是本项目的模板，sections用以保存内容，images用以保存图片。
+
+注意：documentclass使用的是ctexart，如果改用book类，定理和定义因为含有计时器，可能会出bug
