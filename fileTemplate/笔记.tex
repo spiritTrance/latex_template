@@ -3,15 +3,15 @@
 \input{mytemplate/componentsIncluder.tex}
 %添加页眉和水印
 \usepackage{ctex, draftwatermark, everypage}
-\SetWatermarkText{SpiritTrance}
+\SetWatermarkText{waterMark}
 \SetWatermarkLightness{0.95}
 \SetWatermarkScale{0.6}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhead[CO, CE]{by: SpiritTrance}
+\fancyhead[CO, CE]{Here to set your page title}
 
 %文档基本信息
-\title{计算机网络学习笔记}
+\title{Here is your title}
 \author{SpiritTrance}
 \date{\today}
 
@@ -20,7 +20,8 @@
     \newpage
     \tableofcontents
     \newpage
-    \input{inputs/<filename>.tex}
+    %input your chapter here
+    \input{sections/<filename>.tex}
     \clearpage
     \newpage
 \end{document}
