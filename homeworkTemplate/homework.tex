@@ -1,5 +1,5 @@
 \documentclass{ctexart}
-% 此处引入常用包，从此行到46行均无需修改
+% 此处引入常用包
 \usepackage[dvipsnames, svgnames, x11names]{xcolor}
 \usepackage{listings}
 \usepackage{graphicx}
@@ -16,27 +16,26 @@
 \usepackage{bm}
 \usepackage{tikz}
 \usepackage{xparse}
+\usepackage{fancyhdr}
 
-\pagestyle{empty}
 
-
-%定义题目计数器和命令
+%定义题目计数器和命令，无需修改
 \newcounter{questioncnt}
 \newcounter{subquestioncnt}[questioncnt]
 \newcounter{subsubquestioncnt}[subquestioncnt]
 
-\NewDocumentCommand\question{om}{\noindent\IfNoValueTF{#1}{\stepcounter{questioncnt}\arabic{questioncnt}\quad#2}{#1\quad#2}\par}
-\NewDocumentCommand\subquestion{om}{\noindent\IfNoValueTF{#1}{\stepcounter{subquestioncnt}\arabic{questioncnt}.\arabic{subquestioncnt}\quad#2}{#1\quad#2}\par}
-\NewDocumentCommand\subsubquestion{om}{\noindent\IfNoValueTF{#1}{\stepcounter{subsubquestioncnt}\arabic{questioncnt}.\arabic{subquestioncnt}.\arabic{subsubquestioncnt}\quad#2}{#1\quad#2}\par}
+\NewDocumentCommand\question{om}{\noindent\IfNoValueTF{#1}{\textcolor{blue}{\stepcounter{questioncnt}\arabic{questioncnt}}}{#1}\quad#2\par}
+\NewDocumentCommand\subquestion{om}{\noindent\IfNoValueTF{#1}{\textcolor{blue}{\stepcounter{subquestioncnt}\arabic{questioncnt}.\arabic{subquestioncnt}}}{#1}\quad#2\par}
+\NewDocumentCommand\subsubquestion{om}{\noindent\IfNoValueTF{#1}{\textcolor{blue}{\stepcounter{subsubquestioncnt}\arabic{questioncnt}.\arabic{subquestioncnt}.\arabic{subsubquestioncnt}}}{#1}\quad#2\par}
 
-%定义回答计数器和命令
+%定义回答计数器和命令，无需修改
 \newcounter{answercnt}
 \newcounter{subanswercnt}[answercnt]
 \newcounter{subsubanswercnt}[subanswercnt]
 
-\NewDocumentCommand\answer{o}{\noindent\IfNoValueTF{#1}{\stepcounter{answercnt}\arabic{answercnt}}{#1}\quad}
-\NewDocumentCommand\subanswer{o}{\noindent\IfNoValueTF{#1}{\stepcounter{subanswercnt}\arabic{answercnt}.\arabic{subanswercnt}}{#1}\quad}
-\NewDocumentCommand\subsubanswer{o}{\noindent\IfNoValueTF{#1}{\stepcounter{subsubanswercnt}\arabic{answercnt}.\arabic{subanswercnt}.\arabic{subsubanswercnt}}{#1}\quad}
+\NewDocumentCommand\answer{o}{\noindent\textcolor{blue}{\IfNoValueTF{#1}{\stepcounter{answercnt}\arabic{answercnt}}{#1}}\quad}
+\NewDocumentCommand\subanswer{o}{\noindent\textcolor{blue}{\IfNoValueTF{#1}{\stepcounter{subanswercnt}\arabic{answercnt}.\arabic{subanswercnt}}{#1}}\quad}
+\NewDocumentCommand\subsubanswer{o}{\noindent\textcolor{blue}{\IfNoValueTF{#1}{\stepcounter{subsubanswercnt}\arabic{answercnt}.\arabic{subanswercnt}.\arabic{subsubanswercnt}}{#1}}\quad}
 
 %在此处进行基本信息修改
 \newcommand{\sCourse}{示例课程}   %课程名
@@ -44,8 +43,12 @@
 \newcommand{\sName}{spirittrance}           %学生姓名
 \newcommand{\sNumber}{20204205}     %学号
 
-%页边距设置
-\usepackage[left=2cm,right=2cm,top=3cm,bottom=1cm]{geometry}
+%页边距设置修改
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+
+%页眉设置修改
+\pagestyle{fancy}
+\fancyhead[C]{\today}
 
 \begin{document}
     \setcounter{answercnt}{0}
