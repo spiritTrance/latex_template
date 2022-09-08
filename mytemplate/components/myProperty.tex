@@ -1,9 +1,9 @@
 \newcounter{myPropertyCounter}
     %Here to define a auto counter
 \newcommand{\myAutoPropertyCounter}{\stepcounter{myPropertyCounter}\themyPropertyCounter}
-\definecolor{myPropertyColor}{HTML}{46A3FF}
+\definecolor{__myPropertyColor__}{HTML}{46A3FF}
 \newenvironment{myProperties}{
     \setcounter{myPropertyCounter}{0}
-    \begin{itemize}[label=\textbf{\color{myPropertyColor}{性质\myAutoPropertyCounter}}]
+    \begin{itemize}[label=\textbf{\color{__myPropertyColor__}{性质\myAutoPropertyCounter}}]
 
 }{\end{itemize}}
