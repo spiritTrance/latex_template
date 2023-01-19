@@ -1,0 +1,264 @@
+// Place your key bindings in this file to override the defaults
+[
+    //  markdown
+    {
+        "key": "ctrl+shift+k",
+        "command": "markdown.extension.editing.toggleCodeBlock",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+oem_3",
+        "command": "markdown.extension.editing.toggleCodeSpan",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "\n$$\n ${TM_SELECTED_TEXT}\n$$" 
+        }
+    },
+    {
+        "key": "ctrl+1",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "# ${TM_SELECTED_TEXT}" 
+        }
+    },
+    {
+        "key": "ctrl+2",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "## ${TM_SELECTED_TEXT}" 
+        }
+    },
+    {
+        "key": "ctrl+3",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "### ${TM_SELECTED_TEXT}" 
+        }
+    },
+    {
+        "key": "ctrl+4",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "#### ${TM_SELECTED_TEXT}" 
+        }
+    },
+    {
+        "key": "ctrl+5",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "##### ${TM_SELECTED_TEXT}" 
+        }
+    },
+    {
+        "key": "ctrl+6",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "###### ${TM_SELECTED_TEXT}" 
+        }
+    },
+    {
+        "key": "ctrl+m",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "$${TM_SELECTED_TEXT}$" 
+        }
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "![](${TM_SELECTED_TEXT})" 
+        }
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'",
+        "args": {
+            "snippet": "> ${TM_SELECTED_TEXT}" 
+        }
+    },
+    //math for markdown and latex
+    {
+        "key": "alt+b",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown' || editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\boldsymbol{${TM_SELECTED_TEXT}}" 
+        }
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown' || editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\frac{${TM_SELECTED_TEXT}}{}" 
+        }
+    },
+    //  latex
+    //  this is the old version. New computer setting is needed.
+    {
+        "key": "ctrl+shift+m",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\n\\begin{equation}\n\t\\label{eq:eq1}\n${TM_SELECTED_TEXT}\n\\end{equation}\n" 
+        }
+    },
+    
+    {
+        "key": "ctrl+m",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "$${TM_SELECTED_TEXT}$" 
+        }
+    },
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\mydef{${TM_SELECTED_TEXT}}" 
+        }
+    },
+    {
+        "key": "ctrl+u",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\underline{${TM_SELECTED_TEXT}}" 
+        }
+    },
+    {
+        "key": "ctrl+e",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\myemph{${TM_SELECTED_TEXT}}" 
+        }
+    },
+    {
+        "key": "ctrl+b",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\textbf{${TM_SELECTED_TEXT}}" 
+        }
+    },
+    {
+        "key": "ctrl+i",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\textit{${TM_SELECTED_TEXT}}" 
+        }
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\n\\begin{mybox}[mycoldefault]{}\n${TM_SELECTED_TEXT}\n\\end{mybox}\n" 
+        }
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\n\\begin{lstlisting}\n${TM_SELECTED_TEXT}\n\\end{lstlisting}\n" 
+        }
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\n\\begin{figure}[htbp]\n\t\\centering\n\t\\label{fig:}\n\t\\includegraphics[scale=.9]{${TM_SELECTED_TEXT}}\n\t\\caption{}\n\\end{figure}\n" 
+        }
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\n\\begin{introduction}\n\t\\item${TM_SELECTED_TEXT}\n\\end{introduction}\n" 
+        }
+    },
+    {
+        "key": "ctrl+alt+q",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\n\\begin{myReference}\n${TM_SELECTED_TEXT}\n\\end{myReference}\n" 
+        }
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\n\\begin{remark}\n${TM_SELECTED_TEXT}\n\\end{remark}\n" 
+        }
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\elegantpar{${TM_SELECTED_TEXT}}{}" 
+        }
+    },
+    {
+        "key": "ctrl+1",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\chapter{${TM_SELECTED_TEXT}}\n" 
+        }
+    },
+    {
+        "key": "ctrl+2",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\section{${TM_SELECTED_TEXT}}\n" 
+        }
+    },
+    {
+        "key": "ctrl+3",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\subsection{${TM_SELECTED_TEXT}}\n" 
+        }
+    },
+    {
+        "key": "ctrl+4",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\subsubsection{${TM_SELECTED_TEXT}}\n" 
+        }
+    },
+    // anaconda
+    {
+        "key": "ctrl+alt+n",
+        "when": "editorLangId == 'python'",
+        "command": "TConda.open"
+    },
+]
